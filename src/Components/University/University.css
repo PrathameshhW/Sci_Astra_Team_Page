@@ -1,0 +1,80 @@
+.t-container {
+  padding-top: 1.5rem;
+}
+
+.headings > .primaryHeading {
+  font-size: 5rem;
+}
+.headings > .primaryText {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.university {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem 2rem;
+  margin-top: 4rem;
+}
+
+.card {
+  border: 2px solid black;
+  color: black !important;
+  transition: color 0.4s ease-in-out;
+  border-radius: 10px;
+  z-index: 1;
+  font-size: inherit;
+  font-family: inherit;
+  color: white;
+  padding: 0.5em 1em;
+  outline: none;
+}
+
+.card:hover {
+  animation: jelly 0.5s;
+}
+
+@keyframes jelly {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+
+.u-name {
+  font-size: 1.2rem !important;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 1200px) {
+  .university {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .university {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 640px) {
+  .t-wrapper > .flexColStart {
+    align-items: center;
+    justify-content: center;
+  }
+  .university {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
